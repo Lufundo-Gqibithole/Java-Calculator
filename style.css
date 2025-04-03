@@ -1,0 +1,76 @@
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background for simplicity */
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background for the calculator */
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#display {
+    background-color: #eaeaea; /* Light gray background for the display */
+    color: #333; /* Dark text for readability */
+    text-align: right;
+    font-size: 32px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 10px;
+}
+
+#buttons button {
+    background-color: #d4d4d4; /* Light gray buttons */
+    color: #000; /* Black text for buttons */
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+#buttons button:hover {
+    background-color: #c0c0c0; /* Slightly darker gray on hover */
+    cursor: pointer;
+}
+
+#buttons button:active {
+    background-color: #a0a0a0; /* Darker gray when pressed */
+}
+
+/* Special styling for operator buttons */
+#buttons button:nth-child(4n) {
+    background-color: #ff9500; /* Orange for operators */
+    color: white;
+}
+
+/* Special styling for AC and other top buttons */
+#buttons button:nth-child(-n+3) {
+    background-color: #f0f0f0; /* Light background for top buttons */
+    color: black;
+}
+
+/* Styling for the "0" button to span two columns */
+#buttons button:nth-child(17) {
+    grid-column: span 2;
+}
